@@ -1,14 +1,14 @@
 import React from 'react';
-import './Button.css';
+import styles from './Button.module.css';
 
 function Button({ children, clickHandler, type }) {
   return (
     <button
       type="button"
-      className={type === 'outline' ? 'outline' : 'default'}
+      className={type === 'outline' ? styles.outline : styles.default}
       onClick={clickHandler}
     >
-      { children }
+      { children}
     </button>
   );
 };

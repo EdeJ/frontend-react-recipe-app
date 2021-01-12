@@ -3,14 +3,14 @@ import { recipes } from './assets/recipes';
 import Card from './components/card/Card';
 import Header from './components/header/Header';
 import Button from './components/button/Button';
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
   return (
-    <div className="page-container">
-     <Header />
+    <div className={styles['page-container']}>
+      <Header />
       <Button>Ga naar EdHub</Button>
-      <div className="recipe-container">
+      <div className={styles['recipe-container']}>
         {recipes.map((recipe) => {
           return (
             <Card
